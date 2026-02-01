@@ -9,14 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../ImageSource/DupploPulse.UsImaging.Infrastracture.ImageSource.csproj" />
     <ProjectReference Include="..\..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
-    <ProjectReference Include="..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\src\Visonize.UsImaging.Domain.csproj" />
     <ProjectReference Include="..\Beamformer\DupploPulse.UsImaging.Infrastracture.Beamformer.csproj" />
     <ProjectReference Include="..\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\Renderer\src\DupploPulse.UsImaging.Infrastructure.Renderer.csproj" />
     <ProjectReference Include="..\Stream\src\DupploPulse.UsImaging.Infrastructure.Stream.csproj" />
-    <ProjectReference Include="..\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj" />
   </ItemGroup>
   
   <ItemGroup>

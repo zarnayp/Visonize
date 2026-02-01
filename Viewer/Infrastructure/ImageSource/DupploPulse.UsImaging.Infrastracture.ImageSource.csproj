@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
-    <ProjectReference Include="..\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\..\..\Imaging\Domain\src\Visonize.UsImaging.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Imaging\Infrastrucutre\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj" />
   </ItemGroup>
   

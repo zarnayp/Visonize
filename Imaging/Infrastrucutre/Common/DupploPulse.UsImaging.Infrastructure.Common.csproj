@@ -10,7 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
+      <ProjectReference Include="..\..\Domain\src\Visonize.UsImaging.Domain.csproj" />
     </ItemGroup>
 
 </Project>

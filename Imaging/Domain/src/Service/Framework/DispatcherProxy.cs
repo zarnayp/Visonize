@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: InternalsVisibleTo("DupploPulse.UsImaging.Domain.Tests")]
+[assembly: InternalsVisibleTo("Visonize.UsImaging.Domain.Tests")]
 
 namespace DupploPulse.UsImaging.Domain.Service.Framework
 {
