@@ -1,0 +1,173 @@
+// Reference:
+// http://graphicsrunner.blogspot.de/2009/01/volume-rendering-101.html
+
+Texture3D<float> txVolume;
+Texture2D<float4> txPositionFront;
+Texture2D<float4> txPositionBack;
+
+SamplerState txPositionFront_sampler;
+
+cbuffer Constants
+{
+    float width;
+    float height;
+    float startX;
+    float startY;
+};
+
+// Constants and constant buffer variables
+static const uint g_iMaxIterations = 256;
+
+// Diagonal of a unit cube has length sqrt(3)
+static const float g_fStepSize = sqrt(3.f) / g_iMaxIterations;
+
+struct PSInput
+{
+    float4 pos : SV_POSITION;
+    float zVal : TEXCOORD0;
+    
+};
+
+struct PSOutput
+{
+    float4 Color : SV_TARGET;
+};
+
+// Remap grayscale value from [inMin, inMax] to [outMin, outMax]
+float RemapRange(float value, float inMin, float inMax, float outMin, float outMax)
+{
+    float t = saturate((value - inMin) / (inMax - inMin));
+    return lerp(outMin, outMax, t);
+}
+
+
+// Bilinear blend of 4 corner colors based on (x,y) in [0,1]
+float4 SampleSpectrum2D(
+    float2 uv)
+{
+    float4 cLeft = float4(0, 0, 0, 0);
+    
+    float4 cMid1 = float4(0.482, 0.278, 0.141, 1.0);
+    float4 cMid2 = float4(0.8627, 0.7137, 0.4157, 0.5); // #DCB66A
+    float4 cRight = float4(1, 1, 1, 1);
+    float4 cBottom = float4(0, 0, 0, 0);
+    float4 cTop = float4(0, 0.24, 0.9, 1);
+
+    float4 horiz;
+    if (uv.x < 0.33)
+    {
+        // blend between left and mid
+        float t = uv.x / 0.33;
+        horiz = lerp(cLeft, cMid1, t);
+
+    }
+    else if (uv.x < 0.66)
+    {
+        // blend between mid and right
+        float t = (uv.x - 0.33) / 0.33;
+        horiz = lerp(cMid1, cMid2, t);
+    }
+    else
+    {
+        // blend between mid and right
+        float t = (uv.x - 0.66) / 0.33;
+        horiz = lerp(cMid2, cRight, t);
+    }
+
+    float4 bottom = lerp(cBottom, cTop, uv.x);
+    
+    float4 final = lerp(horiz, bottom, uv.y);
+    final.a = uv.x / 20;
+
+    return final;
+}
+
+float4 main(in PSInput PSIn) : SV_TARGET
+{
+    float2 g_fInvWindowSize = float2(width, height);
+    
+    // Get the current pixel location on the screen. 
+    // This is used to sample the front and back textures mapped to the cube	
+    float2 translatedPos = PSIn.pos.xy - float2(startX, startY);
+    float2 tex = translatedPos * g_fInvWindowSize;
+
+    // Now read the cube frotn to back - "sample from front to back"	
+    float4 pos_front = txPositionFront.Sample(txPositionFront_sampler, tex);
+    float4 pos_back = txPositionBack.Sample(txPositionFront_sampler, tex);
+ 
+    // Calculate the direction the ray is cast
+    float3 dir = normalize(pos_back.rgb - pos_front.rgb);
+    
+    // Single step: direction times delta step - g_fStepSize is precaluclated
+    float3 step = g_fStepSize * dir;
+
+    // The current position - remember we start from the front
+    float3 v = pos_front.rgb;
+
+    // clip plane
+    float3 planePoint = float3(0, 0, 0);
+    float3 planeNormal = float3(0, 0, 1);
+
+    float4 acuColor = float4(0, 0, 0, 0);
+    float depth = PSIn.zVal;
+    
+    // iterate for the volume, sampling along the way at equidistant steps 
+    [loop]
+    for (uint i = 0; i < g_iMaxIterations; ++i)
+    {
+        if (dot(v - planePoint, planeNormal) > 0.5)
+        {
+            //return float4(0.4 * resultR.r, 0.4 * result.r, 0.4 * resultB.r, 0);
+        }
+        else
+        {
+            float2 src;
+            float intensity;
+            
+            // sample the texture accumlating the result as we step through the texture
+            src = txVolume.Sample(txPositionFront_sampler, v).rr;
+            intensity = src.y;
+            
+            intensity = RemapRange(intensity, 0.25, 0.8, 0.0, 1.0);
+            
+           // filter
+            if (intensity >= 0)
+            {
+                float depthFactor;
+
+                if (depth < 0)
+                {
+                    depthFactor = -(depth * 0.8);
+
+                }
+                else
+                {
+                    depthFactor = 0;
+                }
+
+
+                // Front to back blending
+
+                float4 color = SampleSpectrum2D(float2(intensity, depthFactor));
+
+                float Af = acuColor.a;
+                float Ab = color.a;
+
+                float Aout = Af + Ab * (1 - Af);
+
+                float3 Cout = (acuColor.rgb * Af + color.rgb * Ab * (1 - Af)) / max(Aout, 1e-6);
+
+                acuColor = float4(Cout, Aout);
+            }
+        }
+        
+        // Advance the current position
+        depth -= sqrt(3.f) * 2 / g_iMaxIterations;
+        v += step;
+        
+
+    }
+
+    return float4(acuColor.r, acuColor.g, acuColor.b, 0);
+
+}

@@ -1,0 +1,89 @@
+Texture2D<float1> usRawData;
+
+cbuffer Constants
+{
+    //zoom pan input
+    float mmPerPixel;
+    float centerXPx;
+    float centerYPx;
+}
+
+struct PixelInput
+{
+    float4 position : SV_POSITION;
+    float2 texCoord : TEXCOORD0;
+};
+
+
+float4 main(PixelInput input) : SV_TARGET
+{
+    const float axialMinMm = 0;
+    const float axialSpanMm = 160;
+    const float azimMin = -0.7f;
+    const float azimSpan = 1.4;
+    const float azimApexZPos = -28;
+    
+    const float numOfLines = 179;
+    const float numberOfSamples = 848;
+ 
+    float y = input.position.y + centerYPx - azimApexZPos / mmPerPixel;
+    float x = input.position.x - centerXPx;
+    
+    float angle;
+    float d;
+
+     angle = atan(x / y);
+     d = sqrt(x * x + y * y);
+
+    float3 color = float3(0, 0, 0);
+
+    float minPx = (abs(azimApexZPos) + axialMinMm) / mmPerPixel;
+    float maxPx = (abs(azimApexZPos) + axialSpanMm) / mmPerPixel;
+    
+    if (angle < (azimMin + azimSpan) && angle > azimMin && d > minPx & d < maxPx)
+    {
+        float step = (azimSpan / numOfLines);
+        int steps = (int) ((angle - azimMin) / step);
+        
+        int line1 = steps;
+        int line2 = steps + 1;
+        
+        float line1Angle = line1 * step + azimMin;
+        float line2Angle = line2 * step + azimMin;
+        
+        float weight2 = (angle - line1Angle) / step;
+        float weight1 = 1.f - weight2;
+        
+        float toVerify = 0; //minPx;   TODO: verify why not minPx
+        
+        float axialStep = (maxPx - toVerify) / numberOfSamples;
+        int axialMinSteps = (int) ((d - toVerify) / axialStep);
+        
+        float sample1 = axialMinSteps;
+        float sample2 = axialMinSteps + 1;
+        
+        float weightAxial2 = (d - (sample1 * axialStep));
+        float weightAxial1 = 1.f - weightAxial2;
+
+        float color1 = usRawData.Load(int3(sample1, line1, 0));
+        float color2 = usRawData.Load(int3(sample1, line2, 0));
+        float color3 = usRawData.Load(int3(sample2, line1, 0));
+        float color4 = usRawData.Load(int3(sample2, line2, 0));
+        
+        float colorFinal =  weight1 * weightAxial1 * color1 +
+                            weight2 * weightAxial1 * color2 +
+                            weight1 * weightAxial2 * color3 +
+                            weight2 * weightAxial2 * color4;
+
+        // Convert standart rgb to linear rgb
+        colorFinal = (colorFinal <= 0.04045) ? (colorFinal / 12.92) : pow((colorFinal + 0.055) / 1.055, 2.4);
+
+        color = float3(colorFinal, colorFinal, colorFinal);
+    }
+    else
+    {
+        color = float3(0, 0, 0);
+    }
+    
+    return float4(color, 1.0);
+}

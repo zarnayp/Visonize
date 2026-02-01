@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Web", "DupploPulse.UsImaging.Infrastructure.Web.csproj", "{B101FE5D-BA91-44E0-B18A-7E3D468177D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.CompositionRoot", "..\CompositionRoot\DupploPulse.UsImaging.Infrastracture.CompositionRoot.csproj", "{53919EEB-580D-4B68-AA99-7865916876D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.Renderer", "..\Renderer\DupploPulse.UsImaging.Infrastracture.Renderer.csproj", "{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Domain", "..\..\Domain\DupploPulse.UsImaging.Domain.csproj", "{83D3FD7E-062B-40F4-8133-106A97B08B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene", "..\..\..\PragmaticScene\Scene\PragmaticScene.csproj", "{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene.Renderer", "..\..\..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj", "{160757E0-EA2E-4255-A0A2-0BD909B3C9B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CC92E527-1B2A-4370-A137-B8294180C5D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{29E42E01-98F4-459C-B2BC-349A3F44A0F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.ImageSource", "..\ImageSource\DupploPulse.UsImaging.Infrastracture.ImageSource.csproj", "{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B101FE5D-BA91-44E0-B18A-7E3D468177D0}.Debug|x64.ActiveCfg = Debug|x64
+		{B101FE5D-BA91-44E0-B18A-7E3D468177D0}.Debug|x64.Build.0 = Debug|x64
+		{B101FE5D-BA91-44E0-B18A-7E3D468177D0}.Release|x64.ActiveCfg = Release|x64
+		{B101FE5D-BA91-44E0-B18A-7E3D468177D0}.Release|x64.Build.0 = Release|x64
+		{53919EEB-580D-4B68-AA99-7865916876D3}.Debug|x64.ActiveCfg = Debug|x64
+		{53919EEB-580D-4B68-AA99-7865916876D3}.Debug|x64.Build.0 = Debug|x64
+		{53919EEB-580D-4B68-AA99-7865916876D3}.Release|x64.ActiveCfg = Release|x64
+		{53919EEB-580D-4B68-AA99-7865916876D3}.Release|x64.Build.0 = Release|x64
+		{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}.Debug|x64.ActiveCfg = Debug|x64
+		{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}.Debug|x64.Build.0 = Debug|x64
+		{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}.Release|x64.ActiveCfg = Release|x64
+		{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}.Release|x64.Build.0 = Release|x64
+		{83D3FD7E-062B-40F4-8133-106A97B08B97}.Debug|x64.ActiveCfg = Debug|x64
+		{83D3FD7E-062B-40F4-8133-106A97B08B97}.Debug|x64.Build.0 = Debug|x64
+		{83D3FD7E-062B-40F4-8133-106A97B08B97}.Release|x64.ActiveCfg = Release|x64
+		{83D3FD7E-062B-40F4-8133-106A97B08B97}.Release|x64.Build.0 = Release|x64
+		{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}.Debug|x64.ActiveCfg = Debug|x64
+		{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}.Debug|x64.Build.0 = Debug|x64
+		{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}.Release|x64.ActiveCfg = Release|x64
+		{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}.Release|x64.Build.0 = Release|x64
+		{160757E0-EA2E-4255-A0A2-0BD909B3C9B1}.Debug|x64.ActiveCfg = Debug|x64
+		{160757E0-EA2E-4255-A0A2-0BD909B3C9B1}.Debug|x64.Build.0 = Debug|x64
+		{160757E0-EA2E-4255-A0A2-0BD909B3C9B1}.Release|x64.ActiveCfg = Release|x64
+		{160757E0-EA2E-4255-A0A2-0BD909B3C9B1}.Release|x64.Build.0 = Release|x64
+		{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}.Debug|x64.ActiveCfg = Debug|x64
+		{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}.Debug|x64.Build.0 = Debug|x64
+		{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}.Release|x64.ActiveCfg = Release|x64
+		{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53919EEB-580D-4B68-AA99-7865916876D3} = {CC92E527-1B2A-4370-A137-B8294180C5D6}
+		{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D} = {CC92E527-1B2A-4370-A137-B8294180C5D6}
+		{83D3FD7E-062B-40F4-8133-106A97B08B97} = {29E42E01-98F4-459C-B2BC-349A3F44A0F0}
+		{A07CB67F-1A0C-4538-BF7B-769CEB6C804C} = {29E42E01-98F4-459C-B2BC-349A3F44A0F0}
+		{160757E0-EA2E-4255-A0A2-0BD909B3C9B1} = {CC92E527-1B2A-4370-A137-B8294180C5D6}
+		{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE} = {CC92E527-1B2A-4370-A137-B8294180C5D6}
+	EndGlobalSection
+EndGlobal

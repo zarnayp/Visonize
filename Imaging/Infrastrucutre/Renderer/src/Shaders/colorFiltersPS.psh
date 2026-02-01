@@ -1,0 +1,36 @@
+Texture2D g_Input : register(t0);
+Texture1D g_LUT : register(t1);
+
+struct PSIn
+{
+    float4 pos : SV_Position;
+    float2 uv : TEXCOORD0; // normalized [0..1]
+};
+
+float4 main(PSIn input) : SV_Target
+{
+    
+    uint width, height;
+    g_Input.GetDimensions(width, height);
+
+    // Convert UV to integer texel coords
+    uint2 pixel = uint2((1 - input.uv.x) * width, (1 - input.uv.y) * height);
+
+    // Direct texel fetch
+    float4 color = g_Input.Load(int3(pixel, 0));
+
+    float4 lutColor;
+    
+    if (color.r == 0)
+    {
+        lutColor = int4(0, 0, 0, 1);
+
+    }
+    else
+    {
+        lutColor = g_LUT.Load(int2(int(color.r * 255), 0));
+    }
+
+    return float4(lutColor);
+
+}

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj" />
+    <ProjectReference Include="..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
+    <ProjectReference Include="..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
+    <ProjectReference Include="..\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj" />
+  </ItemGroup>
+  
+</Project>

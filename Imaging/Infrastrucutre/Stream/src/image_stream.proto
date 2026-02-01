@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DupploPulse.UsImaging.Infrastructure.Stream";
+
+service ImageStreamer {
+  rpc StreamImages (ImageRequest) returns (stream ImageReply);
+}
+
+message ImageRequest {
+  string filter = 1; // Optional filter field (can be ignored or used)
+}
+
+message ImageReply {
+  bytes image_data = 1;
+}

@@ -1,0 +1,264 @@
+// Reference:
+// http://graphicsrunner.blogspot.de/2009/01/volume-rendering-101.html
+
+Texture3D<float> txVolume;
+Texture2D<float4> txPositionFront;
+Texture2D<float4> txPositionBack;
+
+SamplerState txPositionFront_sampler;
+
+cbuffer Constants
+{
+    float width;
+    float height;
+};
+
+// Constants and constant buffer variables
+static const uint g_iMaxIterations = 256;
+
+// Diagonal of a unit cube has length sqrt(3)
+static const float g_fStepSize = sqrt(3.f) / g_iMaxIterations;
+
+struct PSInput
+{
+    float4 pos : SV_POSITION;
+};
+
+struct PSOutput
+{
+    float4 Color : SV_TARGET;
+};
+
+// Simple gradient-based normal from volume for slice shading.
+float3 VolumeGradient(float3 posVS)
+{
+    // Central differences; assumes normalized coords and small offset.
+    float h = 0.002;
+    float dx = txVolume.SampleLevel(txPositionFront_sampler, posVS + float3(h, 0, 0), 0) - txVolume.SampleLevel(txPositionFront_sampler, posVS - float3(h, 0, 0), 0);
+    float dy = txVolume.SampleLevel(txPositionFront_sampler, posVS + float3(0, h, 0), 0) - txVolume.SampleLevel(txPositionFront_sampler, posVS - float3(0, h, 0), 0);
+    float dz = txVolume.SampleLevel(txPositionFront_sampler, posVS + float3(0, 0, h), 0) - txVolume.SampleLevel(txPositionFront_sampler, posVS - float3(0, 0, h), 0);
+    float3 N = float3(dx, dy, dz);
+    float len = max(length(N), 1e-6);
+    return N / len;
+}
+
+float3 BrightenColor(float3 color, float factor)
+{
+    // Clamp factor to [0,1] for safety
+    factor = saturate(factor);
+
+    // Blend each channel toward white
+    float3 brighter = color + (1.0 - color) * factor;
+
+    return saturate(brighter);
+}
+
+// Define a material struct for optical properties
+struct Material
+{
+    float sigma_a; // absorption coefficient
+    float sigma_s; // scattering coefficient
+    float3 albedo; // base color
+    float g; // anisotropy factor
+};
+
+// Map normalized density [0..1] to bone/tissue optical properties
+Material mapDensityToMaterial(float density)
+{
+    Material m;
+
+    // Bone threshold: typically higher density (e.g. >0.6)
+    if (density > 0.13)
+    {
+        // Absorption: strong, clamps translucency
+        m.sigma_a = lerp(2.0, 5.0, saturate((density - 0.6) / 0.4));
+
+        // Scattering: modest, adds subtle softness
+        m.sigma_s = 0.2 + 0.3 * (density - 0.6);
+
+        // Albedo: off-white with slight warmth
+        m.albedo = float3(0.95, 0.92, 0.88);
+
+        // Isotropic scattering
+        m.g = 0.0;
+    }
+    else
+    {
+                // Tissue > fully transparent
+        m.sigma_a = 0.0;
+        m.sigma_s = 0.0;
+        m.albedo = float3(0.0, 0.0, 0.0);
+        m.g = 0.0;
+        
+        // Below threshold -> treat as soft tissue
+      //  m.sigma_a = 0.1 * density;
+        //m.sigma_s = 0.5 * density;
+       // m.albedo = float3(0.9, 0.7, 0.6); // tissue tint
+       // m.g = 0.3; // mild forward scatter
+    }
+
+    return m;
+}
+
+// Front-to-back compositing helper
+void composite(inout float3 accumColor, inout float accumAlpha, float3 sampleColor, float sampleAlpha)
+{
+    float T_view = (1.0 - accumAlpha);
+    accumColor += T_view * sampleAlpha * sampleColor;
+    accumAlpha += T_view * sampleAlpha;
+}
+
+float4 main(in PSInput PSIn) : SV_TARGET
+{
+    float2 g_fInvWindowSize = float2(width, height);
+    
+    // Get the current pixel location on the screen. 
+    // This is used to sample the front and back textures mapped to the cube	
+    float2 tex = PSIn.pos.xy * g_fInvWindowSize;
+
+    // Now read the cube frotn to back - "sample from front to back"	
+    float4 pos_front = txPositionFront.Sample(txPositionFront_sampler, tex);
+    float4 pos_back = txPositionBack.Sample(txPositionFront_sampler, tex);
+ 
+    // Calculate the direction the ray is cast
+    float3 dir = normalize(pos_back.rgb - pos_front.rgb);
+    
+    // Single step: direction times delta step - g_fStepSize is precaluclated
+    float3 step = g_fStepSize * dir;
+
+    // The current position - remember we start from the front
+    float3 v = pos_front.rgb;
+
+    // Accumulate result: value and transparency (alpha)
+    float2 result = float2(0, 0);
+    float2 resultB = float2(0, 0);
+    float2 resultR = float2(0, 0);
+    float2 resultG = float2(0, 0);
+    
+    
+    // clip plane
+    float3 planePoint = float3(0, 0, 0);
+    float3 planeNormal = float3(0, 0, 1);
+ 
+    bool beyondEdge = false; // todo: break from loop does not work for some reason
+    
+    float3 final = float3(0, 0, 0);
+    float accumAlpha = 0;
+    float3 accumColor = 0;
+    // iterate for the volume, sampling along the way at equidistant steps 
+    
+    [loop]
+    for (uint i = 0; i < g_iMaxIterations; ++i)
+    {
+        if (dot(v - planePoint, planeNormal) > 1)
+        {
+            resultR = float2(0, 0);
+            resultG = float2(0, 0);
+            resultB = float2(0, 0);
+            
+            
+            //return float4(0.4 * resultR.r, 0.4 * result.r, 0.4 * resultB.r, 0);
+        }
+        else
+        {
+        
+                        
+            float density = txVolume.Sample(txPositionFront_sampler, v);
+            
+            if (density < 0.2 || beyondEdge)
+            {
+                density = 0;
+            }
+            else
+            {
+                beyondEdge = true;
+                
+            
+                Material mat = mapDensityToMaterial(density); // {sigma_a, sigma_s, albedo, g}
+                float sigma_t = mat.sigma_a + mat.sigma_s;
+
+                // Per-step transmittance to camera
+                float stepAlpha = 1.0 - exp(-sigma_t * step);
+            
+                // settings
+                float gGradScale = 3.0;
+                float gWrapW = 0.8;
+                
+                        // Gradient-based surface cue
+                float3 grad = VolumeGradient(v);
+                float gradMag = saturate(length(grad) * gGradScale);
+                float3 N = (gradMag > 1e-4) ? normalize(grad) : float3(0, 0, 0);
+     
+                // Light in texture space
+                float3 gLightPos = float3(0, 2, 2);                
+                //float3 lightDirW = normalize(gLightPos - posW);
+                //float3 lightDirTex = normalize(WorldToTex(posW + lightDirW) - WorldToTex(posW));
+                float3 lightDirW = normalize(float3(1, 1, 0));
+                
+                    // Surface-like diffuse using wrap lighting
+                float wrap = (dot(N, lightDirW) + gWrapW) / (1.0 + gWrapW);
+                float surfDiffuse = max(wrap, 0.0);
+                float3 surf = mat.albedo * surfDiffuse * gradMag;
+                
+                
+                    // Final sample color (no scatter)
+                float3 sampleColor = surf * 20;
+                
+                    // Composite
+                composite(accumColor, accumAlpha, sampleColor, stepAlpha);
+                
+                //{ 
+           // v += step;
+         //   break; // quit marching beyond the plane
+        //}
+            
+ 
+                
+                //src = txVolume.Sample(txPositionFront_sampler, v).rr;
+            
+               // density += 0.25 + 2.95 * lambert;
+            
+        
+                
+
+        // sample the texture accumlating the result as we step through the texture
+            
+
+        // filter
+        
+                float depth = (float) i / (float) g_iMaxIterations * 1;
+
+
+               // float3 colorA = float3(0.584, 0.365, 0.129); // Red
+               // float3 colorB = float3(0.0, 0.0, 1.0); // Blue
+                
+                
+               float3 colorA = float3(0.4, 0.2, 0.1); // Red
+               float3 colorB = float3(0.2, 0.2, 0.1); // Blue
+
+
+    // Linear interpolation between colors
+                float3 gradientColor = lerp(colorA, colorB, 2* (float) i / (float) g_iMaxIterations );
+                
+             //   accumColor = gradientColor;
+              //  final = BrightenColor(gradientColor, T_view);
+            //    final = float3(T_view, T_view, T_view);
+             //   final = ;
+
+            }
+        }
+        
+        // Advance the current position
+        v += step;
+        
+
+    }
+ 
+    float3 color = accumColor; // apply exposure and filmic curve externally or here
+
+    return float4(color, accumAlpha);
+    //return float4(0.4 * final.r, 0.4 * final.g, 0.4 * final.b, 0);
+    
+    //return float4(0.4 * resultR.r, 0.4 * result.r, 0.4 * resultB.r, 0);
+
+}

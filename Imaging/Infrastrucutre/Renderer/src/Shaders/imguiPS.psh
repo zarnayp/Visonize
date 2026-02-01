@@ -1,0 +1,33 @@
+// ImGui Pixel Shader
+struct PSInput
+{
+    float4 pos : SV_POSITION;
+    float4 col : COLOR0;
+    float2 uv  : TEXCOORD0;
+};
+
+Texture2D    Texture   : register(t0);
+SamplerState Sampler   : register(s0);
+
+float4 main(PSInput input) : SV_Target
+{
+    //float4 color = input.col * Texture.Sample(Sampler, input.uv);
+    
+    //float dist = length(input.uv - float2(0.5, 0.5));
+    //return float4(0.5, dist, dist, color.a); // Visualize distance
+    float4 color = input.col * Texture.Sample(Sampler, input.uv);
+    return color;
+    
+
+    //float4 color = input.col * Texture.Sample(Sampler, input.uv);
+
+    //float radius = 0.4;
+
+    //float2 center = float2(0.5, 0.5);
+    //float dist = length(input.uv - center);
+    //float edge = smoothstep(radius, radius + fwidth(dist), dist);
+    //float4 color2 = color * (1.0 - edge * 0.6);
+    
+    //return color2;
+
+}

@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DupploPulse.UsImaging.Infrastructure.Stream";
+
+package interaction;
+
+message MouseEvent {
+  int32 x = 1;
+  int32 y = 2;
+  int32 eventType = 3; // 1 - move, 2 - down, 3 up
+  string button = 4; // "left", "right", "middle"
+
+}
+
+message TextMessage {
+  string text = 1;
+}
+
+message InteractionResponse {
+  string status = 1;
+}
+
+service InteractionStream {
+  rpc StreamMouseEvents(stream MouseEvent) returns (stream InteractionResponse);
+  rpc StreamTextMessages(stream TextMessage) returns (stream InteractionResponse);
+}
