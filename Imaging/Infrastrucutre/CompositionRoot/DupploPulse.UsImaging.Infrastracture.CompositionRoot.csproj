@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../../PragmaticScene/Scene/PragmaticScene.csproj" />
     <ProjectReference Include="../ImageSource/DupploPulse.UsImaging.Infrastracture.ImageSource.csproj" />
+    <ProjectReference Include="..\..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
     <ProjectReference Include="..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
     <ProjectReference Include="..\Beamformer\DupploPulse.UsImaging.Infrastracture.Beamformer.csproj" />
     <ProjectReference Include="..\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />

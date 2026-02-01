@@ -1,0 +1,86 @@
+<Window x:Class="Standalone.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:Standalone"
+        Title="OverlayWindow"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Topmost="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Width="400" Height="300">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <ui:BoolOrToGridLengthConverter x:Key="BoolOrToGridLength"/>
+    </Window.Resources>
+
+    <!-- 2x2 grid - overlays placed in a cell each (top-left, top-right, bottom-left, bottom-right).
+         Row/Column sizes collapse to 0 when their contained viewports are all hidden. -->
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <!-- Row 0 visible if viewport1 OR viewport2 visible -->
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <MultiBinding Converter="{StaticResource BoolOrToGridLength}">
+                        <Binding Path="WorkSpace.Viewport1Visible"/>
+                        <Binding Path="WorkSpace.Viewport2Visible"/>
+                    </MultiBinding>
+                </RowDefinition.Height>
+            </RowDefinition>
+
+            <!-- Row 1 visible if viewport3 OR viewport4 visible -->
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <MultiBinding Converter="{StaticResource BoolOrToGridLength}">
+                        <Binding Path="WorkSpace.Viewport3Visible"/>
+                        <Binding Path="WorkSpace.Viewport4Visible"/>
+                    </MultiBinding>
+                </RowDefinition.Height>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!-- Col 0 visible if viewport1 OR viewport3 visible -->
+            <ColumnDefinition>
+                <ColumnDefinition.Width>
+                    <MultiBinding Converter="{StaticResource BoolOrToGridLength}">
+                        <Binding Path="WorkSpace.Viewport1Visible"/>
+                        <Binding Path="WorkSpace.Viewport3Visible"/>
+                    </MultiBinding>
+                </ColumnDefinition.Width>
+            </ColumnDefinition>
+
+            <!-- Col 1 visible if viewport2 OR viewport4 visible -->
+            <ColumnDefinition>
+                <ColumnDefinition.Width>
+                    <MultiBinding Converter="{StaticResource BoolOrToGridLength}">
+                        <Binding Path="WorkSpace.Viewport2Visible"/>
+                        <Binding Path="WorkSpace.Viewport4Visible"/>
+                    </MultiBinding>
+                </ColumnDefinition.Width>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ui:ViewportOverlay x:Name="viewport1Overlay"
+                            Grid.Row="0" Grid.Column="0"
+                            Visibility="{Binding WorkSpace.Viewport1Visible, Converter={StaticResource BoolToVis}}"
+                            DataContext="{Binding WorkSpace.Viewport0}" />
+
+        <ui:ViewportOverlay x:Name="viewport2Overlay"
+                            Grid.Row="0" Grid.Column="1"
+                            Visibility="{Binding WorkSpace.Viewport2Visible, Converter={StaticResource BoolToVis}}"
+                            DataContext="{Binding WorkSpace.Viewport1}" />
+
+        <ui:ViewportOverlay x:Name="viewport3Overlay"
+                            Grid.Row="1" Grid.Column="0"
+                            Visibility="{Binding WorkSpace.Viewport3Visible, Converter={StaticResource BoolToVis}}"
+                            DataContext="{Binding WorkSpace.Viewport2}" />
+
+        <ui:ViewportOverlay x:Name="viewport4Overlay"
+                            Grid.Row="1" Grid.Column="1"
+                            Visibility="{Binding WorkSpace.Viewport4Visible, Converter={StaticResource BoolToVis}}"
+                            DataContext="{Binding WorkSpace.Viewport3}" />
+    </Grid>
+</Window>

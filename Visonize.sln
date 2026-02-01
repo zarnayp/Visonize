@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastrucutre", "Infrastrucutre", "{040DF340-41B3-431D-81AD-F73F08815744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.ImageSource", "Imaging\Infrastrucutre\ImageSource\DupploPulse.UsImaging.Infrastracture.ImageSource.csproj", "{A393493D-20FD-4AF8-96BC-94C8E640C093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.CompositionRoot", "Imaging\Infrastrucutre\CompositionRoot\DupploPulse.UsImaging.Infrastracture.CompositionRoot.csproj", "{5EFC4672-2D58-4206-9E00-032F776E0594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene", "..\PragmaticScene\Scene\PragmaticScene.csproj", "{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene.Renderer", "..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj", "{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FCD194F6-4756-4A4B-A6CA-3CCE256E7D32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Standalone", "Standalone", "{A3DAFAFA-CCE4-4F9B-9280-A5AACD265069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Standalone", "WpfUI\DupploPulse.UsImaging.Standalone.csproj", "{D998BECE-F78A-461E-B3A2-9263530DA76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.Beamformer", "Imaging\Infrastrucutre\Beamformer\DupploPulse.UsImaging.Infrastracture.Beamformer.csproj", "{03113D29-BADD-461D-B54F-74A7BF4A0D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Stream", "Imaging\Infrastrucutre\Stream\src\DupploPulse.UsImaging.Infrastructure.Stream.csproj", "{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Stream.Tests", "Imaging\Infrastrucutre\Stream\tests\DupploPulse.UsImaging.Infrastructure.Stream.Tests.csproj", "{01F49668-DE05-4991-9986-37845D579BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Common", "Imaging\Infrastrucutre\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj", "{89830FCF-DDB3-49EC-B21A-1C46517982EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Domain", "Imaging\Domain\src\DupploPulse.UsImaging.Domain.csproj", "{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Domain.Tests", "Imaging\Domain\tests\DupploPulse.UsImaging.Domain.Tests.csproj", "{094DF196-7976-4318-8A2C-070E85E104DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Renderer", "Imaging\Infrastrucutre\Renderer\src\DupploPulse.UsImaging.Infrastructure.Renderer.csproj", "{4E21E46F-20FE-4665-8803-374FFB83D516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Renderer.Tests", "Imaging\Infrastrucutre\Renderer\Tests\DupploPulse.UsImaging.Infrastructure.Renderer.Tests.csproj", "{D062398F-46A2-4603-9564-0A9271B68F32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Application", "Imaging\Application\DupploPulse.UsImaging.Application.csproj", "{E738C1D8-C473-4899-9B19-27F23B6F87C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Dicom", "Imaging\Infrastrucutre\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj", "{D81CF733-2869-BCF9-79F9-8E95938149C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Dicom.Tests", "Imaging\Infrastrucutre\Dicom\Tests\DupploPulse.UsImaging.Infrastructure.Dicom.Tests.csproj", "{2689990E-F6E6-6696-4A79-AE4E04CAC7F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A393493D-20FD-4AF8-96BC-94C8E640C093}.Debug|x64.ActiveCfg = Debug|x64
+		{A393493D-20FD-4AF8-96BC-94C8E640C093}.Debug|x64.Build.0 = Debug|x64
+		{A393493D-20FD-4AF8-96BC-94C8E640C093}.Release|x64.ActiveCfg = Release|x64
+		{A393493D-20FD-4AF8-96BC-94C8E640C093}.Release|x64.Build.0 = Release|x64
+		{5EFC4672-2D58-4206-9E00-032F776E0594}.Debug|x64.ActiveCfg = Debug|x64
+		{5EFC4672-2D58-4206-9E00-032F776E0594}.Debug|x64.Build.0 = Debug|x64
+		{5EFC4672-2D58-4206-9E00-032F776E0594}.Release|x64.ActiveCfg = Release|x64
+		{5EFC4672-2D58-4206-9E00-032F776E0594}.Release|x64.Build.0 = Release|x64
+		{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}.Debug|x64.ActiveCfg = Debug|x64
+		{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}.Debug|x64.Build.0 = Debug|x64
+		{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}.Release|x64.ActiveCfg = Release|x64
+		{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}.Release|x64.Build.0 = Release|x64
+		{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1}.Debug|x64.ActiveCfg = Debug|x64
+		{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1}.Debug|x64.Build.0 = Debug|x64
+		{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1}.Release|x64.ActiveCfg = Release|x64
+		{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1}.Release|x64.Build.0 = Release|x64
+		{D998BECE-F78A-461E-B3A2-9263530DA76A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D998BECE-F78A-461E-B3A2-9263530DA76A}.Debug|x64.Build.0 = Debug|Any CPU
+		{D998BECE-F78A-461E-B3A2-9263530DA76A}.Release|x64.ActiveCfg = Release|Any CPU
+		{D998BECE-F78A-461E-B3A2-9263530DA76A}.Release|x64.Build.0 = Release|Any CPU
+		{03113D29-BADD-461D-B54F-74A7BF4A0D2E}.Debug|x64.ActiveCfg = Release|x64
+		{03113D29-BADD-461D-B54F-74A7BF4A0D2E}.Debug|x64.Build.0 = Release|x64
+		{03113D29-BADD-461D-B54F-74A7BF4A0D2E}.Release|x64.ActiveCfg = Debug|x64
+		{03113D29-BADD-461D-B54F-74A7BF4A0D2E}.Release|x64.Build.0 = Debug|x64
+		{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}.Debug|x64.ActiveCfg = Release|x64
+		{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}.Debug|x64.Build.0 = Release|x64
+		{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}.Release|x64.ActiveCfg = Release|x64
+		{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}.Release|x64.Build.0 = Release|x64
+		{01F49668-DE05-4991-9986-37845D579BC6}.Debug|x64.ActiveCfg = Release|x64
+		{01F49668-DE05-4991-9986-37845D579BC6}.Release|x64.ActiveCfg = Release|x64
+		{01F49668-DE05-4991-9986-37845D579BC6}.Release|x64.Build.0 = Release|x64
+		{89830FCF-DDB3-49EC-B21A-1C46517982EF}.Debug|x64.ActiveCfg = Release|x64
+		{89830FCF-DDB3-49EC-B21A-1C46517982EF}.Debug|x64.Build.0 = Release|x64
+		{89830FCF-DDB3-49EC-B21A-1C46517982EF}.Release|x64.ActiveCfg = Release|x64
+		{89830FCF-DDB3-49EC-B21A-1C46517982EF}.Release|x64.Build.0 = Release|x64
+		{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}.Debug|x64.ActiveCfg = Debug|x64
+		{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}.Debug|x64.Build.0 = Debug|x64
+		{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}.Release|x64.ActiveCfg = Release|x64
+		{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}.Release|x64.Build.0 = Release|x64
+		{094DF196-7976-4318-8A2C-070E85E104DA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{094DF196-7976-4318-8A2C-070E85E104DA}.Debug|x64.Build.0 = Debug|Any CPU
+		{094DF196-7976-4318-8A2C-070E85E104DA}.Release|x64.ActiveCfg = Release|Any CPU
+		{094DF196-7976-4318-8A2C-070E85E104DA}.Release|x64.Build.0 = Release|Any CPU
+		{4E21E46F-20FE-4665-8803-374FFB83D516}.Debug|x64.ActiveCfg = Debug|x64
+		{4E21E46F-20FE-4665-8803-374FFB83D516}.Debug|x64.Build.0 = Debug|x64
+		{4E21E46F-20FE-4665-8803-374FFB83D516}.Release|x64.ActiveCfg = Release|x64
+		{4E21E46F-20FE-4665-8803-374FFB83D516}.Release|x64.Build.0 = Release|x64
+		{D062398F-46A2-4603-9564-0A9271B68F32}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D062398F-46A2-4603-9564-0A9271B68F32}.Debug|x64.Build.0 = Debug|Any CPU
+		{D062398F-46A2-4603-9564-0A9271B68F32}.Release|x64.ActiveCfg = Release|Any CPU
+		{D062398F-46A2-4603-9564-0A9271B68F32}.Release|x64.Build.0 = Release|Any CPU
+		{E738C1D8-C473-4899-9B19-27F23B6F87C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E738C1D8-C473-4899-9B19-27F23B6F87C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{E738C1D8-C473-4899-9B19-27F23B6F87C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{E738C1D8-C473-4899-9B19-27F23B6F87C8}.Release|x64.Build.0 = Release|Any CPU
+		{D81CF733-2869-BCF9-79F9-8E95938149C8}.Debug|x64.ActiveCfg = Debug|x64
+		{D81CF733-2869-BCF9-79F9-8E95938149C8}.Debug|x64.Build.0 = Debug|x64
+		{D81CF733-2869-BCF9-79F9-8E95938149C8}.Release|x64.ActiveCfg = Release|x64
+		{D81CF733-2869-BCF9-79F9-8E95938149C8}.Release|x64.Build.0 = Release|x64
+		{2689990E-F6E6-6696-4A79-AE4E04CAC7F8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2689990E-F6E6-6696-4A79-AE4E04CAC7F8}.Debug|x64.Build.0 = Debug|Any CPU
+		{2689990E-F6E6-6696-4A79-AE4E04CAC7F8}.Release|x64.ActiveCfg = Release|Any CPU
+		{2689990E-F6E6-6696-4A79-AE4E04CAC7F8}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A393493D-20FD-4AF8-96BC-94C8E640C093} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{5EFC4672-2D58-4206-9E00-032F776E0594} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB} = {FCD194F6-4756-4A4B-A6CA-3CCE256E7D32}
+		{ADCB6FCB-33BA-4709-8E1F-4AD8284DFFA1} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{D998BECE-F78A-461E-B3A2-9263530DA76A} = {A3DAFAFA-CCE4-4F9B-9280-A5AACD265069}
+		{03113D29-BADD-461D-B54F-74A7BF4A0D2E} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{4022F4FF-BDEF-4A08-BA1F-C631FA65D727} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{01F49668-DE05-4991-9986-37845D579BC6} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{89830FCF-DDB3-49EC-B21A-1C46517982EF} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{EE7FFB57-508E-41E0-8213-F82ADA6A6F19} = {FCD194F6-4756-4A4B-A6CA-3CCE256E7D32}
+		{094DF196-7976-4318-8A2C-070E85E104DA} = {FCD194F6-4756-4A4B-A6CA-3CCE256E7D32}
+		{4E21E46F-20FE-4665-8803-374FFB83D516} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{D062398F-46A2-4603-9564-0A9271B68F32} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{E738C1D8-C473-4899-9B19-27F23B6F87C8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D81CF733-2869-BCF9-79F9-8E95938149C8} = {040DF340-41B3-431D-81AD-F73F08815744}
+		{2689990E-F6E6-6696-4A79-AE4E04CAC7F8} = {040DF340-41B3-431D-81AD-F73F08815744}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75EAC1A3-44EB-406D-8191-B7AEC20268BC}
+	EndGlobalSection
+EndGlobal

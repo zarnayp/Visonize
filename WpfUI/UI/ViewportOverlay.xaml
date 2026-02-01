@@ -1,0 +1,38 @@
+<UserControl x:Class="Standalone.ViewportOverlay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <!-- Button placed top-right; semi-transparent cross icon, using shared IconButtonStyle -->
+        <Button x:Name="CloseBtn"
+                Width="28" Height="28"
+                HorizontalAlignment="Right" VerticalAlignment="Top"
+                BorderThickness="0"
+                Padding="0"
+                Command="{Binding CloseCommand}"                
+                Style="{StaticResource IconButtonStyle}">
+            <Grid Width="26" Height="26" >
+                <Grid.Background>
+                    <SolidColorBrush Color="#01000000"/>
+                    <!-- almost fully transparent, counts for hit-test -->
+                </Grid.Background>
+                <Path Margin="6"
+                      Data="M0,0 L10,10 M10,0 L0,10"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
+                      StrokeThickness="2"
+                      Stretch="Uniform"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Opacity="0.6"/>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>

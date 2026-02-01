@@ -54,8 +54,8 @@
 
   
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj" />
-    <ProjectReference Include="..\..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
+    <ProjectReference Include="..\..\..\..\..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj" />
+    <ProjectReference Include="..\..\..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
     <ProjectReference Include="..\..\..\Domain\src\DupploPulse.UsImaging.Domain.csproj" />
     <ProjectReference Include="..\..\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj" />
   </ItemGroup>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="DupploPulse.UsImaging.Standalone.Thumbnails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DupploPulse.UsImaging.Standalone.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="240">
+    <Grid  Width="240">
+        <Grid.Resources>
+            <local:ThumbnailBorderBrushConverter x:Key="ThumbnailBorderBrushConverter" />
+            <local:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter" />
+        </Grid.Resources>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="PART_Items" ItemsSource="{Binding Thumbnails.Thumbnails}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border x:Name="PART_Border" MouseDown="PART_Border_MouseDown" BorderThickness="1" Margin="6,10" CornerRadius="4"
+                                BorderBrush="{Binding Selected, Converter={StaticResource ThumbnailBorderBrushConverter}}">
+                            <Image Width="200" Height="150" Stretch="UniformToFill" Source="{Binding ImageData, Converter={StaticResource ByteArrayToImageSourceConverter}}" />
+                        </Border>
+                        <!--<DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Selected}" Value="True">
+                                <Setter TargetName="PART_Border" Property="BorderBrush" Value="{Binding Selected, Converter={StaticResource ThumbnailBorderBrushConverter}}" />
+                            </DataTrigger>
+                        </DataTemplate.Triggers>-->
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

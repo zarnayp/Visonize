@@ -30,8 +30,8 @@ Imaging/Infrastrucutre/Dicom/src/bin/
 Imaging/Infrastrucutre/Dicom/src/obj/
 Imaging/Infrastrucutre/Dicom/tests/bin/
 Imaging/Infrastrucutre/Dicom/tests/obj/
-Imaging/Standalone/bin/
-Imaging/Standalone/obj/
+WpfUI/bin/
+WpfUI/obj/
 .vs
 *.cache
 
