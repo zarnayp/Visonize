@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infrastracture\Pipeline\**" />
+    <EmbeddedResource Remove="Infrastracture\Pipeline\**" />
+    <None Remove="Infrastracture\Pipeline\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aggregates\" />
+  </ItemGroup>
+  
+</Project>
