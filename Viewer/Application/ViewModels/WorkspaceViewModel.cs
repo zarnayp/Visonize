@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Visonize.Viewer.Domain.Interfaces;
 
-namespace DupploPulse.UsImaging.Application.ViewModels
+namespace Visonize.UsImaging.Application.ViewModels
 {
     public class WorkspaceViewModel : INotifyPropertyChanged
     {

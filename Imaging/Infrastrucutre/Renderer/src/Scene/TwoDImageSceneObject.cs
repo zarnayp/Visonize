@@ -5,13 +5,13 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
 using System.Drawing;
-using DupploPulse.UsImaging.Domain.Entities.Algs;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Domain.Infrastracture.SceneObjects;
+using Visonize.UsImaging.Domain.Entities.Algs;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Infrastracture.SceneObjects;
 
-namespace DupploPulse.UsImaging.Infrastructure.Renderer.Scene
+namespace Visonize.UsImaging.Infrastructure.Renderer.Scene
 {
     internal class TwoDImageSceneObject : ITwoDImageSceneObject
     {

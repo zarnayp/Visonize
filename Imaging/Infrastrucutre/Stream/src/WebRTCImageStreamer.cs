@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using SIPSorcery.Net;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream;
+namespace Visonize.UsImaging.Infrastructure.Stream;
 
 public class WebRTCImageStreamer
 {

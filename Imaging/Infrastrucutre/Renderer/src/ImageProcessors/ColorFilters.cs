@@ -4,7 +4,7 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace DupploPulse.UsImaging.ImagePostProcessing.ImageProcessors
+namespace Visonize.UsImaging.ImagePostProcessing.ImageProcessors
 {
     internal class ColorFilters : IDisposable
     {

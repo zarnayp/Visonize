@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream;
+namespace Visonize.UsImaging.Infrastructure.Stream;
 
 // disabled to achieve best performance
 #pragma warning disable CS8618 

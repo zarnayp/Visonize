@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PragmaticScene.SceneControl;
 using PragmaticScene.SceneInterfaces;
 
-namespace DupploPulse.UsImaging.Domain.Entities.SceneBehaviour.Measurements
+namespace Visonize.UsImaging.Domain.Entities.SceneBehaviour.Measurements
 {
     internal class CaliperBehaviour : IMouseBehaviour
     {

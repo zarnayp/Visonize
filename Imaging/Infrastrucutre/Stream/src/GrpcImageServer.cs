@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Infrastructure.Common;
 using Grpc.Core;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
     public class GrpcImageServer : IImageStream, IDisposable
     {

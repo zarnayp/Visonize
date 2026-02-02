@@ -1,18 +1,18 @@
 ﻿using System.Diagnostics;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream.Tests
+namespace Visonize.UsImaging.Infrastructure.Stream.Tests
 {
     public class GrpcServerClientTests
     {
         [Test]
         public void GrpcServer_TestUpdate()
         {
-            using (var server = new DupploPulse.UsImaging.Infrastructure.Stream.GrpcImageServer())
+            using (var server = new Visonize.UsImaging.Infrastructure.Stream.GrpcImageServer())
             {
                 Thread.Sleep(1000);
 
-                using (var client = new DupploPulse.UsImaging.Infrastructure.Stream.GrpcImageClient())
+                using (var client = new Visonize.UsImaging.Infrastructure.Stream.GrpcImageClient())
                 {
                     var iamge = new ManagedHeapRGBImageReference(new byte[1024*720*4]);
 

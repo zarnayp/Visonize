@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using DupploPulse.UsImaging.Infrastructure.Web.Models;
+using Visonize.UsImaging.Infrastructure.Web.Models;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web.Controllers
+namespace Visonize.UsImaging.Infrastructure.Web.Controllers
 {
     public class HomeController : Controller
     {

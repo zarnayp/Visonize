@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.SceneObjects;
+using Visonize.UsImaging.Domain.Infrastracture.SceneObjects;
 using PragmaticScene.RenderableInterfaces;
 using PragmaticScene.Scene;
 using PragmaticScene.SceneInterfaces;
 
-namespace DupploPulse.UsImaging.Infrastructure.Renderer.Scene
+namespace Visonize.UsImaging.Infrastructure.Renderer.Scene
 {
     public class UsSceneObjectsCreator : ISceneObjectsCreator
     {

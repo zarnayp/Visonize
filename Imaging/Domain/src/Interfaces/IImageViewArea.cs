@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DupploPulse.UsImaging.Domain.Interfaces
+namespace Visonize.UsImaging.Domain.Interfaces
 {
     public enum ViewportType
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Visonize.Viewer.Domain.Entities;
 
-namespace DupploPulse.UsImaging.Application.Infrastructure
+namespace Visonize.UsImaging.Application.Infrastructure
 {
     public interface IDicomRepository
     {

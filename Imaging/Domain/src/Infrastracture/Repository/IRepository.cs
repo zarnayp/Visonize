@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Domain.Infrastracture.Repository
+namespace Visonize.UsImaging.Domain.Infrastracture.Repository
 {
     internal interface IRepository
     {

@@ -4,7 +4,7 @@ using PragmaticScene.RenderableInterfaces;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 
-namespace DupploPulse.UsImaging.ImagePostProcessing.ImageProcessors
+namespace Visonize.UsImaging.ImagePostProcessing.ImageProcessors
 {
     internal class ScanConverter
     {

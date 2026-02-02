@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using PragmaticScene.Scene;
 using PragmaticScene.SceneControl;
 using PragmaticScene.RenderableInterfaces;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Interfaces;
 using PragmaticScene.SceneInterfaces;
 
-namespace DupploPulse.UsImaging.Domain.Entities.Scene
+namespace Visonize.UsImaging.Domain.Entities.Scene
 {
 
     public class ImageViewArea : IImageViewArea

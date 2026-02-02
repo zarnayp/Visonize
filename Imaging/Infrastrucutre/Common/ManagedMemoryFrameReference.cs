@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
 
-namespace DupploPulse.UsImaging.Infrastructure.Common
+namespace Visonize.UsImaging.Infrastructure.Common
 {
 
     public class ManagedMemoryFrameReference : IRawFrameReference, IRFFrameReference, IDisposable

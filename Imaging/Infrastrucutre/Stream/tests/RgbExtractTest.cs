@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream.Tests;
+namespace Visonize.UsImaging.Infrastructure.Stream.Tests;
 
 public class RgbExtractTest
 {

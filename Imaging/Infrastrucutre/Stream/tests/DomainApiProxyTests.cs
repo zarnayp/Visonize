@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Infrastructure.Common;
 using Moq;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream.Tests
+namespace Visonize.UsImaging.Infrastructure.Stream.Tests
 {
     public class DomainApiProxyTests
     {

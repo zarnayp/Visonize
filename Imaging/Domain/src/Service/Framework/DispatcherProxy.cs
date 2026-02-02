@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 [assembly: InternalsVisibleTo("Visonize.UsImaging.Domain.Tests")]
 
-namespace DupploPulse.UsImaging.Domain.Service.Framework
+namespace Visonize.UsImaging.Domain.Service.Framework
 {
     
     internal static class DispatcherProxyCreator

@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace DupploPulse.UsImaging.Infrastructure.Dicom.Tests
+namespace Visonize.UsImaging.Infrastructure.Dicom.Tests
 {
     public class DicomFileUtilsTest
     {

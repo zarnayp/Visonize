@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DupploPulse.UsImaging.Infrastructure.CompositionRoot
+namespace Visonize.UsImaging.Infrastructure.CompositionRoot
 {
     public class Program
     {

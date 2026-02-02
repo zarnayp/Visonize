@@ -5,9 +5,9 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
 
-namespace DupploPulse.UsImaging.Infrastructure.Common
+namespace Visonize.UsImaging.Infrastructure.Common
 {
     public class SystemTime : ISystemTime
     {

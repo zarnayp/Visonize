@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 //using Grpc.Client;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
     public class GrpcInteractionClient : IDisposable
     {

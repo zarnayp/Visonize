@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
 
-namespace DupploPulse.UsImaging.Domain.ValueObjects
+namespace Visonize.UsImaging.Domain.ValueObjects
 {
     public struct RFFrameDescription
     {

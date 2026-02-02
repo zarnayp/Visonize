@@ -13,19 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Application.ViewModels;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Service;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Infrastracture.Beamformer;
-using DupploPulse.UsImaging.Infrastracture.ImageSource;
-using DupploPulse.UsImaging.Infrastructure.Common;
-using DupploPulse.UsImaging.Infrastructure.Dicom;
-using DupploPulse.UsImaging.Infrastructure.Renderer;
-using DupploPulse.UsImaging.Infrastructure.Renderer.Renderer;
-using DupploPulse.UsImaging.Infrastructure.Renderer.Scene;
-using DupploPulse.UsImaging.Infrastructure.Stream;
+using Visonize.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Service;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Infrastracture.Beamformer;
+using Visonize.UsImaging.Infrastracture.ImageSource;
+using Visonize.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Infrastructure.Dicom;
+using Visonize.UsImaging.Infrastructure.Renderer;
+using Visonize.UsImaging.Infrastructure.Renderer.Renderer;
+using Visonize.UsImaging.Infrastructure.Renderer.Scene;
+using Visonize.UsImaging.Infrastructure.Stream;
 using PragmaticScene.RenderableInterfaces;
 using PragmaticScene.Renderer;
 using PragmaticScene.Renderer.Scene;
@@ -116,7 +116,7 @@ public partial class MainWindow : Window
         if (result == true)
         {
             var path = dlg.FileNames;
-            if (this.DataContext is DupploPulse.UsImaging.Application.ViewModels.ViewerViewModel vm)
+            if (this.DataContext is Visonize.UsImaging.Application.ViewModels.ViewerViewModel vm)
             {
                 vm.LoadFile(path);
             }

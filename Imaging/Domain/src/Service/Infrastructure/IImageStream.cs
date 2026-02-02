@@ -1,4 +1,4 @@
-namespace DupploPulse.UsImaging.Domain.Service.Infrastructure;
+namespace Visonize.UsImaging.Domain.Service.Infrastructure;
 
 public interface IImageStream
 {

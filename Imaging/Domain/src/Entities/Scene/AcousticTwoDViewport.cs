@@ -4,19 +4,19 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.SceneObjects;
 using PragmaticScene.Scene;
 using PragmaticScene.SceneControl;
 using PragmaticScene.RenderableInterfaces;
 using PragmaticScene.SceneInterfaces;
-using DupploPulse.UsImaging.Domain.Entities.SceneBehaviour;
-using DupploPulse.UsImaging.Domain.Entities.SceneBehaviour.Measurements;
-using DupploPulse.UsImaging.Domain.Infrastracture.SceneObjects;
+using Visonize.UsImaging.Domain.Entities.SceneBehaviour;
+using Visonize.UsImaging.Domain.Entities.SceneBehaviour.Measurements;
+using Visonize.UsImaging.Domain.Infrastracture.SceneObjects;
 
-namespace DupploPulse.UsImaging.Domain.Entities.Scene
+namespace Visonize.UsImaging.Domain.Entities.Scene
 {
     internal class AcousticTwoDViewport : IAcousticTwoDViewport
     {

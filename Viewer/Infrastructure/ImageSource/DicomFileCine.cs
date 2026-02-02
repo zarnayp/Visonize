@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastracture.ImageSource
+namespace Visonize.UsImaging.Infrastracture.ImageSource
 {
     public class DicomFileCine : IArchivedDataSource
     {

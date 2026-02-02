@@ -1,7 +1,7 @@
 using System.Reflection;
-using DupploPulse.UsImaging.Domain.Service.Framework;
+using Visonize.UsImaging.Domain.Service.Framework;
 
-namespace DupploPulse.UsImaging.Domain.Tests.Service.Framework
+namespace Visonize.UsImaging.Domain.Tests.Service.Framework
 {
 
     internal interface ITargetMockInterface

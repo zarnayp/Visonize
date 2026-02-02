@@ -1,7 +1,7 @@
-﻿using DupploPulse.UsImaging.Domain.Service.Infrastructure;
+﻿using Visonize.UsImaging.Domain.Service.Infrastructure;
 using Grpc.Core;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
     public class GrpcInteractionServer : IInteractionStream, IDisposable
     {

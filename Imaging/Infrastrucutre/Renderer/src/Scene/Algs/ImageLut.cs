@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Domain.Entities.Algs
+namespace Visonize.UsImaging.Domain.Entities.Algs
 {
     internal static class ImageLut
     {

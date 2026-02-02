@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\PragmaticScene\Scene\PragmaticScene.csproj" />
+    <ProjectReference Include="..\..\..\Viewer\Domain\Visonize.Viewer.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Viewer\Infrastructure\ImageSource\Visonize.UsImaging.Infrastracture.ImageSource.csproj" />
+    <ProjectReference Include="..\..\Domain\src\Visonize.UsImaging.Domain.csproj" />
+    <ProjectReference Include="..\Beamformer\Visonize.UsImaging.Infrastracture.Beamformer.csproj" />
+    <ProjectReference Include="..\Common\Visonize.UsImaging.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\Renderer\src\Visonize.UsImaging.Infrastructure.Renderer.csproj" />
+    <ProjectReference Include="..\Stream\src\Visonize.UsImaging.Infrastructure.Stream.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="Assets/**" CopyToOutputDirectory="PreserveNewest" TargetPath="Assets/%(Filename)%(Extension)" Visible="false" />
+	<!--<Content Include="../../../OTS/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe" CopyToOutputDirectory="PreserveNewest" Visible="false" />-->
+  </ItemGroup>
+ 
+
+</Project>

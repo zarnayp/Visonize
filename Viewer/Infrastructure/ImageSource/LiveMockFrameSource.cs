@@ -4,12 +4,12 @@ using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Infrastructure.Common;
 using PragmaticScene.Scene;
 
-namespace DupploPulse.UsImaging.Infrastracture.ImageSource
+namespace Visonize.UsImaging.Infrastracture.ImageSource
 {
     public class LiveMockFrameSource : ILiveDataSource
     {

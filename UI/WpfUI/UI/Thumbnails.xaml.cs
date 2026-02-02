@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DupploPulse.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Application.ViewModels;
 
-namespace DupploPulse.UsImaging.Standalone
+namespace Visonize.UsImaging.Standalone
 {
     /// <summary>
     /// Interaction logic for Thumbnails.xaml

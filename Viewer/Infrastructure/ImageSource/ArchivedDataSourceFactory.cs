@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.Infrastructure;
 
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Infrastructure.Dicom;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Infrastructure.Dicom;
 using Visonize.Viewer.Domain.Entities;
 using Visonize.Viewer.Domain.Service.Infrastructure;
 
-namespace DupploPulse.UsImaging.Infrastracture.ImageSource
+namespace Visonize.UsImaging.Infrastracture.ImageSource
 {
     public class ArchivedDataSourceFactory : IArchivedDataSourceFactory
     {

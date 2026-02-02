@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Domain.Service.Infrastructure
+namespace Visonize.UsImaging.Domain.Service.Infrastructure
 {
     public enum MouseButton
     {

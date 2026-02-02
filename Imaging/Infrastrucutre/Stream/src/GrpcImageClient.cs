@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Grpc.Core;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
     public class GrpcImageClient : IDisposable
     {

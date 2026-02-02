@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PragmaticScene.Scene;
 using PragmaticScene.SceneControl;
 
-namespace DupploPulse.UsImaging.Domain.Entities.SceneBehaviour
+namespace Visonize.UsImaging.Domain.Entities.SceneBehaviour
 {
     internal class ZoomPan2DViewportBehaviour : IMouseBehaviour
     {

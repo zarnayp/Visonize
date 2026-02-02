@@ -1,4 +1,4 @@
-namespace DupploPulse.UsImaging.Infrastructure.Web.Models
+namespace Visonize.UsImaging.Infrastructure.Web.Models
 {
     public class ErrorViewModel
     {

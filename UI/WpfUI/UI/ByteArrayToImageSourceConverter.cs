@@ -5,9 +5,9 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
-using DupploPulse.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Application.ViewModels;
 
-namespace DupploPulse.UsImaging.Standalone.UI
+namespace Visonize.UsImaging.Standalone.UI
 {
     public class ByteArrayToImageSourceConverter : IValueConverter
     {

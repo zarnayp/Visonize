@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
     public class DomainApiProxyDeserializer
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.Player;
 
-namespace DupploPulse.UsImaging.Domain.Interfaces
+namespace Visonize.UsImaging.Domain.Interfaces
 {
     public interface IImaging
     {

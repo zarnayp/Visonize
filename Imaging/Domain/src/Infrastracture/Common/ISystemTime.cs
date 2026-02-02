@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Domain.Infrastracture.Common
+namespace Visonize.UsImaging.Domain.Infrastracture.Common
 {
     public interface ISystemTime
     {

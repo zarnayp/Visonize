@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
 
-namespace DupploPulse.UsImaging.Infrastructure.Stream.Tests
+namespace Visonize.UsImaging.Infrastructure.Stream.Tests
 {
     public class GrpcInteractionServerClientTest
     {

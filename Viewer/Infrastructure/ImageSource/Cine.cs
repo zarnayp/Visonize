@@ -1,13 +1,13 @@
 
 using System;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Infrastracture.Player;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Player;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastracture.ImageSource
+namespace Visonize.UsImaging.Infrastracture.ImageSource
 {
     public class Cine : ICine
     {

@@ -1,4 +1,4 @@
-﻿namespace DupploPulse.UsImaging.Infrastructure.Filters
+﻿namespace Visonize.UsImaging.Infrastructure.Filters
 {
     public class Class1
     {

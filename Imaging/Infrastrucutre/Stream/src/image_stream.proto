@@ -1,6 +1,6 @@
-﻿syntax = "proto3";
+syntax = "proto3";
 
-option csharp_namespace = "DupploPulse.UsImaging.Infrastructure.Stream";
+option csharp_namespace = "Visonize.UsImaging.Infrastructure.Stream";
 
 service ImageStreamer {
   rpc StreamImages (ImageRequest) returns (stream ImageReply);

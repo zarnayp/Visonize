@@ -1,7 +1,7 @@
 
-using DupploPulse.UsImaging.Infrastructure.CompositionRoot;
+using Visonize.UsImaging.Infrastructure.CompositionRoot;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web
+namespace Visonize.UsImaging.Infrastructure.Web
 {
     internal class Program
     {

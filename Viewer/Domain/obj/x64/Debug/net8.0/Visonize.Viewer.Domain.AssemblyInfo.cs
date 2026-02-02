@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Visonize.Viewer.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d791b0dca4877c4e882ee9021083608db1cc9d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f98f2e0c11259480302231244427470f1432d9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Visonize.Viewer.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Visonize.Viewer.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

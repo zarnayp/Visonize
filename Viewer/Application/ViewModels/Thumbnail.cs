@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.Infrastructure;
 using Visonize.Viewer.Domain.Entities;
 
-namespace DupploPulse.UsImaging.Application.ViewModels
+namespace Visonize.UsImaging.Application.ViewModels
 {
     public enum ImageEncoding
     {

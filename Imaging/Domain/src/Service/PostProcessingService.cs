@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Entities.Scene;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Domain.Service.Framework;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Domain.Entities.Scene;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Service.Framework;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.ValueObjects;
 using PragmaticScene.SceneControl;
 using PragmaticScene.SceneInterfaces;
 
-namespace DupploPulse.UsImaging.Domain.Service
+namespace Visonize.UsImaging.Domain.Service
 {
     public class PostProcessingService : IPostProcessingService
     {

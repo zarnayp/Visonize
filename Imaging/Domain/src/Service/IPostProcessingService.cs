@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Entities.Scene;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Entities.Scene;
 
-namespace DupploPulse.UsImaging.Domain.Service
+namespace Visonize.UsImaging.Domain.Service
 {
     public interface IPostProcessingService
     {

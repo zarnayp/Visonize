@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\..\Imaging\Domain\src\Visonize.UsImaging.Domain.csproj" />
+    <ProjectReference Include="..\..\Imaging\Infrastrucutre\Beamformer\Visonize.UsImaging.Infrastracture.Beamformer.csproj" />
+    <ProjectReference Include="..\..\Imaging\Infrastrucutre\Common\Visonize.UsImaging.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\..\Imaging\Infrastrucutre\Renderer\src\Visonize.UsImaging.Infrastructure.Renderer.csproj" />
+    <ProjectReference Include="..\..\Imaging\Infrastrucutre\Stream\src\Visonize.UsImaging.Infrastructure.Stream.csproj" />
+    <ProjectReference Include="..\..\..\PragmaticScene\Renderer\PragmaticScene.Renderer.csproj">
+      <CopyLocalSatelliteAssemblies>True</CopyLocalSatelliteAssemblies>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Viewer\Application\Visonize.UsImaging.Application.csproj" />
+    <ProjectReference Include="..\..\Viewer\Domain\Visonize.Viewer.Domain.csproj" />
+    <ProjectReference Include="..\..\Viewer\Infrastructure\Dicom\src\Visonize.UsImaging.Infrastructure.Dicom.csproj" />
+    <ProjectReference Include="..\..\Viewer\Infrastructure\ImageSource\Visonize.UsImaging.Infrastracture.ImageSource.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets/**" CopyToOutputDirectory="PreserveNewest" TargetPath="Assets/%(Filename)%(Extension)" Visible="false" />
+  </ItemGroup>
+	
+</Project>

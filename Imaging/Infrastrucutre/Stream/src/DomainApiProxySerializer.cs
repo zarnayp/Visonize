@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
-using DupploPulse.UsImaging.Domain.Service.Framework;
+using Visonize.UsImaging.Domain.Service.Framework;
 using Org.BouncyCastle.Asn1.X509;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-[assembly: InternalsVisibleTo("DupploPulse.UsImaging.Infrastructure.Stream.Tests")]
-namespace DupploPulse.UsImaging.Infrastructure.Stream
+[assembly: InternalsVisibleTo("Visonize.UsImaging.Infrastructure.Stream.Tests")]
+namespace Visonize.UsImaging.Infrastructure.Stream
 {
 
     internal class ApiCall

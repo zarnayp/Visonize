@@ -1,9 +1,9 @@
-﻿using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.ValueObjects;
-using DupploPulse.UsImaging.Infrastructure.Common;
+﻿using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastracture.Beamformer
+namespace Visonize.UsImaging.Infrastracture.Beamformer
 {
     public class BeamformerAdapter : IBeamformer
     {

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastrucutre", "Infrastrucutre", "{040DF340-41B3-431D-81AD-F73F08815744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.CompositionRoot", "Imaging\Infrastrucutre\CompositionRoot\DupploPulse.UsImaging.Infrastracture.CompositionRoot.csproj", "{5EFC4672-2D58-4206-9E00-032F776E0594}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.CompositionRoot", "Imaging\Infrastrucutre\CompositionRoot\Visonize.UsImaging.Infrastracture.CompositionRoot.csproj", "{5EFC4672-2D58-4206-9E00-032F776E0594}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene", "..\PragmaticScene\Scene\PragmaticScene.csproj", "{6A5A82E4-DD69-4DAE-A897-8C1B2399D0BB}"
 EndProject
@@ -13,21 +13,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene.Renderer", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FCD194F6-4756-4A4B-A6CA-3CCE256E7D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.Beamformer", "Imaging\Infrastrucutre\Beamformer\DupploPulse.UsImaging.Infrastracture.Beamformer.csproj", "{03113D29-BADD-461D-B54F-74A7BF4A0D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.Beamformer", "Imaging\Infrastrucutre\Beamformer\Visonize.UsImaging.Infrastracture.Beamformer.csproj", "{03113D29-BADD-461D-B54F-74A7BF4A0D2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Stream", "Imaging\Infrastrucutre\Stream\src\DupploPulse.UsImaging.Infrastructure.Stream.csproj", "{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Stream", "Imaging\Infrastrucutre\Stream\src\Visonize.UsImaging.Infrastructure.Stream.csproj", "{4022F4FF-BDEF-4A08-BA1F-C631FA65D727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Stream.Tests", "Imaging\Infrastrucutre\Stream\tests\DupploPulse.UsImaging.Infrastructure.Stream.Tests.csproj", "{01F49668-DE05-4991-9986-37845D579BC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Stream.Tests", "Imaging\Infrastrucutre\Stream\tests\Visonize.UsImaging.Infrastructure.Stream.Tests.csproj", "{01F49668-DE05-4991-9986-37845D579BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Common", "Imaging\Infrastrucutre\Common\DupploPulse.UsImaging.Infrastructure.Common.csproj", "{89830FCF-DDB3-49EC-B21A-1C46517982EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Common", "Imaging\Infrastrucutre\Common\Visonize.UsImaging.Infrastructure.Common.csproj", "{89830FCF-DDB3-49EC-B21A-1C46517982EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Domain", "Imaging\Domain\src\Visonize.UsImaging.Domain.csproj", "{EE7FFB57-508E-41E0-8213-F82ADA6A6F19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Domain.Tests", "Imaging\Domain\tests\Visonize.UsImaging.Domain.Tests.csproj", "{094DF196-7976-4318-8A2C-070E85E104DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Renderer", "Imaging\Infrastrucutre\Renderer\src\DupploPulse.UsImaging.Infrastructure.Renderer.csproj", "{4E21E46F-20FE-4665-8803-374FFB83D516}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Renderer", "Imaging\Infrastrucutre\Renderer\src\Visonize.UsImaging.Infrastructure.Renderer.csproj", "{4E21E46F-20FE-4665-8803-374FFB83D516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Renderer.Tests", "Imaging\Infrastrucutre\Renderer\Tests\DupploPulse.UsImaging.Infrastructure.Renderer.Tests.csproj", "{D062398F-46A2-4603-9564-0A9271B68F32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Renderer.Tests", "Imaging\Infrastrucutre\Renderer\Tests\Visonize.UsImaging.Infrastructure.Renderer.Tests.csproj", "{D062398F-46A2-4603-9564-0A9271B68F32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,7 +36,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solutio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Viewer", "Viewer", "{1C76F594-24C0-4778-8236-620E24BD9CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Application", "Viewer\Application\DupploPulse.UsImaging.Application.csproj", "{67B608EC-DABE-82F6-64EF-47D8E7B4477C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Application", "Viewer\Application\Visonize.UsImaging.Application.csproj", "{67B608EC-DABE-82F6-64EF-47D8E7B4477C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imaging", "Imaging", "{DCA13DC7-C6F7-4190-99AF-C5B75CC9ED89}"
 EndProject
@@ -46,13 +46,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{BC6F48D8-2BAA-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{53E31F3A-D236-4975-88AC-92D271678883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Dicom", "Viewer\Infrastructure\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj", "{D3B5F198-01BD-7FE6-3451-A1CD35F9BBFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Dicom", "Viewer\Infrastructure\Dicom\src\Visonize.UsImaging.Infrastructure.Dicom.csproj", "{D3B5F198-01BD-7FE6-3451-A1CD35F9BBFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Dicom.Tests", "Viewer\Infrastructure\Dicom\Tests\DupploPulse.UsImaging.Infrastructure.Dicom.Tests.csproj", "{F27B570C-04A2-D39D-CD98-DF6999D84D10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Dicom.Tests", "Viewer\Infrastructure\Dicom\Tests\Visonize.UsImaging.Infrastructure.Dicom.Tests.csproj", "{F27B570C-04A2-D39D-CD98-DF6999D84D10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.ImageSource", "Viewer\Infrastructure\ImageSource\DupploPulse.UsImaging.Infrastracture.ImageSource.csproj", "{20583609-7A12-6E38-06E4-F2ABE040B0C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.ImageSource", "Viewer\Infrastructure\ImageSource\Visonize.UsImaging.Infrastracture.ImageSource.csproj", "{20583609-7A12-6E38-06E4-F2ABE040B0C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Standalone", "UI\WpfUI\DupploPulse.UsImaging.Standalone.csproj", "{4A640949-BE0D-B03A-152E-C929ECED5D74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Standalone", "UI\WpfUI\Visonize.UsImaging.Standalone.csproj", "{4A640949-BE0D-B03A-152E-C929ECED5D74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{9E63FB58-2C0A-4E3B-9AF1-467B9E7B2780}"
 EndProject

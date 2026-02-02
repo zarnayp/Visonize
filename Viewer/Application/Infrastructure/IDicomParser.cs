@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Application.ViewModels;
 
-namespace DupploPulse.UsImaging.Application.Infrastructure
+namespace Visonize.UsImaging.Application.Infrastructure
 {
     public interface IDicomFileUtilsrFactory
     {

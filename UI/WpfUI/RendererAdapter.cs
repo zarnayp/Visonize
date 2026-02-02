@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Standalone
 {
-    using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-    using DupploPulse.UsImaging.Infrastructure.Common;
-  //  using global::DupploPulse.UsImaging.Domain.Service.Infrastructure;
+    using Visonize.UsImaging.Domain.Service.Infrastructure;
+    using Visonize.UsImaging.Infrastructure.Common;
+  //  using global::Visonize.UsImaging.Domain.Service.Infrastructure;
 
     public class RendererAdapter : IRenderer
     {

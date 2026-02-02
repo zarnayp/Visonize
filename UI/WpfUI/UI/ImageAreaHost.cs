@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
 
-namespace DupploPulse.UsImaging.Standalone.UI;
+namespace Visonize.UsImaging.Standalone.UI;
 
 public class ImageAreaHost : HwndHost
 {

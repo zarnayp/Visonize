@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace DupploPulse.UsImaging.Standalone.UI
+namespace Visonize.UsImaging.Standalone.UI
 {
     public class ThumbnailBorderBrushConverter : IValueConverter
     {

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.ViewModels;
 using FellowOakDicom;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace DupploPulse.UsImaging.Infrastructure.Dicom
+namespace Visonize.UsImaging.Infrastructure.Dicom
 {
     public class DicomRepositoryFileParser : IDicomRepositoryFileParser
     {

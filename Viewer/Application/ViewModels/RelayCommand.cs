@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace DupploPulse.UsImaging.Application.ViewModels
+namespace Visonize.UsImaging.Application.ViewModels
 {
     public class RelayCommand : ICommand
     {

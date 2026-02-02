@@ -1,9 +1,9 @@
 ﻿using System;
-using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Domain.Interfaces;
 using Visonize.Viewer.Domain.Interfaces;
 
-namespace DupploPulse.UsImaging.Application.ViewModels
+namespace Visonize.UsImaging.Application.ViewModels
 {
     public class ViewerViewModel
     {

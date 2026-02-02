@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using DupploPulse.UsImaging.Domain.Service;
-using DupploPulse.UsImaging.Infrastructure.Web.HubConfig;
+using Visonize.UsImaging.Domain.Service;
+using Visonize.UsImaging.Infrastructure.Web.HubConfig;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web.Controllers
+namespace Visonize.UsImaging.Infrastructure.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

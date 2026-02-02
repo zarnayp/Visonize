@@ -7,18 +7,18 @@ using Visonize.Viewer.Domain.Entities;
 using Visonize.Viewer.Domain.Interfaces;
 using Visonize.Viewer.Domain.Infrastructure;
 using Visonize.Viewer.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Interfaces;
 using static System.Net.Mime.MediaTypeNames;
-using DupploPulse.UsImaging.Domain.Service;
+using Visonize.UsImaging.Domain.Service;
 
 namespace Visonize.Viewer.Domain.Service
 {
     public class ImagingViewAreaAdapter : Visonize.Viewer.Domain.Infrastructure.IImageViewArea
     {
-        private readonly DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
+        private readonly Visonize.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
         private readonly IArchivedDataSourceFactory archivedDataSourceFactory;
 
-        public ImagingViewAreaAdapter(DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
+        public ImagingViewAreaAdapter(Visonize.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
         {
             this.archivedDataSourceFactory = archivedDataSourceFactory;
             this.imageViewArea = imageViewArea;
@@ -34,23 +34,23 @@ namespace Visonize.Viewer.Domain.Service
             var dataSource = await this.archivedDataSourceFactory.CreateArchivedDataSource(viewports[0].Image);
 
             // map to domain interface DTO with context
-            var viewport = new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO
+            var viewport = new Visonize.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO
             {
                 X = viewports[0].X,
                 Y = viewports[0].Y,
                 Width = viewports[0].Width,
                 Height = viewports[0].Height,
-                ViewportType = DupploPulse.UsImaging.Domain.Interfaces.ViewportType.Review,
+                ViewportType = Visonize.UsImaging.Domain.Interfaces.ViewportType.Review,
                 Context = dataSource
             };
 
-            this.imageViewArea.SetViewports(indexes, new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO[] { viewport });
+            this.imageViewArea.SetViewports(indexes, new Visonize.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO[] { viewport });
         }
 
         public void UpdateViewports(int[] indexes, Visonize.Viewer.Domain.Infrastructure.ViewportDTO[] viewports)
         {
             // map dimension-only DTOs to ImageAreaViewportDTO and call UpdateViewports
-            var mapped = viewports.Select(v => new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportDTO { X = v.X, Y = v.Y, Width = v.Width, Height = v.Height, IsVisible = v.IsVisible }).ToArray();
+            var mapped = viewports.Select(v => new Visonize.UsImaging.Domain.Interfaces.ImageAreaViewportDTO { X = v.X, Y = v.Y, Width = v.Width, Height = v.Height, IsVisible = v.IsVisible }).ToArray();
             this.imageViewArea.UpdateViewports(indexes, mapped);
         }
     }
@@ -58,7 +58,7 @@ namespace Visonize.Viewer.Domain.Service
     public class ViewerService : IViewer
     {
         private readonly IPostProcessingService postProcessingService;
-        private readonly DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
+        private readonly Visonize.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
         private readonly IImaging imaging;
         private readonly IArchivedDataSourceFactory archivedDataSourceFactory;
 
@@ -72,7 +72,7 @@ namespace Visonize.Viewer.Domain.Service
 
         private readonly ImageWorkspace imageWorkspace;
 
-        public ViewerService(IImaging imaging, IPostProcessingService postProcessingService , DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
+        public ViewerService(IImaging imaging, IPostProcessingService postProcessingService , Visonize.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
         {
             this.imaging = imaging;
             this.postProcessingService = postProcessingService;

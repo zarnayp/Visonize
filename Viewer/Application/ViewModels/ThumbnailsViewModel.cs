@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using DupploPulse.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.Infrastructure;
 using Visonize.Viewer.Domain.Entities;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Interfaces;
 using Visonize.Viewer.Domain.Interfaces;
 
-namespace DupploPulse.UsImaging.Application.ViewModels
+namespace Visonize.UsImaging.Application.ViewModels
 {
     public class ThumbnailsViewModel : INotifyPropertyChanged
     {

@@ -1,7 +1,7 @@
-﻿using System.Drawing.Imaging;
-using DupploPulse.UsImaging.Infrastructure.Web.Models;
+using System.Drawing.Imaging;
+using Visonize.UsImaging.Infrastructure.Web.Models;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web
+namespace Visonize.UsImaging.Infrastructure.Web
 {
     public class TimerManager
     {
@@ -38,7 +38,7 @@ namespace DupploPulse.UsImaging.Infrastructure.Web
         public static string GetImageData()
         {
 
-            System.Drawing.Image image = System.Drawing.Image.FromFile("d:\\Projects\\DupploPulse\\UltrasoundApplication\\ultrasound-app\\src\\assets\\image.png");
+            System.Drawing.Image image = System.Drawing.Image.FromFile("d:\\Projects\\Visonize\\UltrasoundApplication\\ultrasound-app\\src\\assets\\image.png");
             using (MemoryStream myStream = new MemoryStream())
             {
                 image.Save(myStream, ImageFormat.Png);

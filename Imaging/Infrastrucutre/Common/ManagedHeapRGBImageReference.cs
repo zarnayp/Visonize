@@ -1,6 +1,6 @@
-﻿using DupploPulse.UsImaging.Domain.Service.Infrastructure;
+﻿using Visonize.UsImaging.Domain.Service.Infrastructure;
 
-namespace DupploPulse.UsImaging.Infrastructure.Common;
+namespace Visonize.UsImaging.Infrastructure.Common;
 
 public class ManagedHeapRGBImageReference : IRgbImageReference
 {

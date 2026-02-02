@@ -1,7 +1,7 @@
 
 using System;
 
-namespace DupploPulse.UsImaging.Domain.Service.Framework
+namespace Visonize.UsImaging.Domain.Service.Framework
 {
     public class Dispatcher : IDispatcher
     {

@@ -8,14 +8,14 @@ using System.Runtime.InteropServices;
 using Diligent;
 using PragmaticScene.RendererInterfaces;
 using PragmaticScene.RenderableInterfaces;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.ImagePostProcessing.ImageProcessors;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.ImagePostProcessing.ImageProcessors;
+using Visonize.UsImaging.Infrastructure.Common;
 
 using System.Numerics;
 
-namespace DupploPulse.UsImaging.Infrastructure.Renderer
+namespace Visonize.UsImaging.Infrastructure.Renderer
 {
     internal class TwoDImageRenderer : IProjectedSceneObjectRenderer
     {

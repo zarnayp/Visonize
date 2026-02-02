@@ -1,8 +1,8 @@
 
 using Microsoft.AspNetCore.SignalR;
-using DupploPulse.UsImaging.Domain.Service;
+using Visonize.UsImaging.Domain.Service;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web.HubConfig
+namespace Visonize.UsImaging.Infrastructure.Web.HubConfig
 {
 
     public class MouseEventHub : Hub

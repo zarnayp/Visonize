@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using PragmaticScene.RendererInterfaces;
 using PragmaticScene.RenderableInterfaces;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Domain.Infrastracture.SceneObjects;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Domain.Infrastracture.SceneObjects;
 
-namespace DupploPulse.UsImaging.Infrastructure.Renderer.Scene
+namespace Visonize.UsImaging.Infrastructure.Renderer.Scene
 {
     public class SceneObjectRenderersCreator : ISceneObjectRenderersCreator
     {

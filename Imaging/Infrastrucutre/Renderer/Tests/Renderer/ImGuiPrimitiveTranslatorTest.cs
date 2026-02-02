@@ -1,4 +1,4 @@
-namespace DupploPulse.UsImaging.Infrastructure.Renderer.Tests.Renderer
+namespace Visonize.UsImaging.Infrastructure.Renderer.Tests.Renderer
 {
     public class Tests
     {

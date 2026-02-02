@@ -4,20 +4,20 @@ using System.Diagnostics;
 using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Text;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Service;
-using DupploPulse.UsImaging.Infrastracture.Beamformer;
-using DupploPulse.UsImaging.Infrastracture.CompositionRoot;
-using DupploPulse.UsImaging.Infrastracture.ImageSource;
-using DupploPulse.UsImaging.Infrastructure.Common;
-using DupploPulse.UsImaging.Infrastructure.Renderer;
-using DupploPulse.UsImaging.Infrastructure.Renderer.Renderer;
-using DupploPulse.UsImaging.Infrastructure.Renderer.Scene;
-using DupploPulse.UsImaging.Infrastructure.Stream;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Service;
+using Visonize.UsImaging.Infrastracture.Beamformer;
+using Visonize.UsImaging.Infrastracture.CompositionRoot;
+using Visonize.UsImaging.Infrastracture.ImageSource;
+using Visonize.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Infrastructure.Renderer;
+using Visonize.UsImaging.Infrastructure.Renderer.Renderer;
+using Visonize.UsImaging.Infrastructure.Renderer.Scene;
+using Visonize.UsImaging.Infrastructure.Stream;
 using PragmaticScene.RenderableInterfaces;
 using PragmaticScene.Renderer.Scene;
 
-namespace DupploPulse.UsImaging.Infrastructure.CompositionRoot
+namespace Visonize.UsImaging.Infrastructure.CompositionRoot
 {
     public class Composer
     {

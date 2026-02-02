@@ -10,12 +10,12 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Formats.Png;
 
-using DupploPulse.UsImaging.Domain.Service;
-using DupploPulse.UsImaging.Infrastructure.Web.HubConfig;
+using Visonize.UsImaging.Domain.Service;
+using Visonize.UsImaging.Infrastructure.Web.HubConfig;
 using System.Collections.Concurrent;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
 
-namespace DupploPulse.UsImaging.Infrastructure.Web
+namespace Visonize.UsImaging.Infrastructure.Web
 {
     internal class ImageUpdater
     {

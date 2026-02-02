@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Concurrent;
 using FellowOakDicom;
-using DupploPulse.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.Infrastructure;
 using Visonize.Viewer.Domain.Entities;
 
-namespace DupploPulse.UsImaging.Infrastructure.Dicom;
+namespace Visonize.UsImaging.Infrastructure.Dicom;
 
 public class DicomRepository : IDicomRepository
 {

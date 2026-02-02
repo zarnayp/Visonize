@@ -1,7 +1,7 @@
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastructure.CompositionRoot;
+namespace Visonize.UsImaging.Infrastructure.CompositionRoot;
 
 public class RendererAdapter : IRenderer
 {

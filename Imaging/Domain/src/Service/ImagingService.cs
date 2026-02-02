@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
-using DupploPulse.UsImaging.Domain.Infrastracture.Common;
-using DupploPulse.UsImaging.Domain.Infrastracture.Player;
-using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Player;
-using DupploPulse.UsImaging.Domain.Service.Framework;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Domain.ValueObjects;
+using Visonize.UsImaging.Domain.Infrastracture.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Player;
+using Visonize.UsImaging.Domain.Interfaces;
+using Visonize.UsImaging.Domain.Player;
+using Visonize.UsImaging.Domain.Service.Framework;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Domain.ValueObjects;
 
-namespace DupploPulse.UsImaging.Domain.Service
+namespace Visonize.UsImaging.Domain.Service
 {
     public class ImagingService : IImaging
     {

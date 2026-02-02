@@ -6,13 +6,13 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Diligent;
-using DupploPulse.UsImaging.Domain.SceneObjects;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.SceneObjects;
+using Visonize.UsImaging.Infrastructure.Common;
 using PragmaticScene.RendererInterfaces;
 using PragmaticScene.Scene;
 using PragmaticScene.SceneInterfaces;
 
-namespace DupploPulse.UsImaging.Infrastructure.Renderer.Renderer
+namespace Visonize.UsImaging.Infrastructure.Renderer.Renderer
 {
     using IDeviceContext = IDeviceContext;
 

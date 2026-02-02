@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastructure.Web", "DupploPulse.UsImaging.Infrastructure.Web.csproj", "{B101FE5D-BA91-44E0-B18A-7E3D468177D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastructure.Web", "Visonize.UsImaging.Infrastructure.Web.csproj", "{B101FE5D-BA91-44E0-B18A-7E3D468177D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.CompositionRoot", "..\CompositionRoot\DupploPulse.UsImaging.Infrastracture.CompositionRoot.csproj", "{53919EEB-580D-4B68-AA99-7865916876D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.CompositionRoot", "..\CompositionRoot\Visonize.UsImaging.Infrastracture.CompositionRoot.csproj", "{53919EEB-580D-4B68-AA99-7865916876D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.Renderer", "..\Renderer\DupploPulse.UsImaging.Infrastracture.Renderer.csproj", "{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.Renderer", "..\Renderer\Visonize.UsImaging.Infrastracture.Renderer.csproj", "{13E989A5-17A6-42D0-AA8A-EAB28B1EBB3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Domain", "..\..\Domain\DupploPulse.UsImaging.Domain.csproj", "{83D3FD7E-062B-40F4-8133-106A97B08B97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Domain", "..\..\Domain\Visonize.UsImaging.Domain.csproj", "{83D3FD7E-062B-40F4-8133-106A97B08B97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragmaticScene", "..\..\..\PragmaticScene\Scene\PragmaticScene.csproj", "{A07CB67F-1A0C-4538-BF7B-769CEB6C804C}"
 EndProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{29E42E01-98F4-459C-B2BC-349A3F44A0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupploPulse.UsImaging.Infrastracture.ImageSource", "..\ImageSource\DupploPulse.UsImaging.Infrastracture.ImageSource.csproj", "{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visonize.UsImaging.Infrastracture.ImageSource", "..\ImageSource\Visonize.UsImaging.Infrastracture.ImageSource.csproj", "{A47744E1-4ED6-462D-BFAF-A3DF95E01FBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

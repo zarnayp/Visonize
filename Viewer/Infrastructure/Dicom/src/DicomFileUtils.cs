@@ -2,12 +2,12 @@
 using System.Data;
 using System.IO;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Application.ViewModels;
+using Visonize.UsImaging.Application.Infrastructure;
+using Visonize.UsImaging.Application.ViewModels;
 using FellowOakDicom;
 using FellowOakDicom.Imaging;
 
-namespace DupploPulse.UsImaging.Infrastructure.Dicom
+namespace Visonize.UsImaging.Infrastructure.Dicom
 {
     public class DicomFileUtilsFactory : IDicomFileUtilsrFactory
     {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Infrastracture.Player;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
-using DupploPulse.UsImaging.Infrastructure.Common;
+using Visonize.UsImaging.Domain.Infrastracture.Player;
+using Visonize.UsImaging.Domain.Service.Infrastructure;
+using Visonize.UsImaging.Infrastructure.Common;
 
-namespace DupploPulse.UsImaging.Infrastracture.ImageSource
+namespace Visonize.UsImaging.Infrastracture.ImageSource
 {
     public class RgbImageCollector : IRgbFrameCollector
     {
