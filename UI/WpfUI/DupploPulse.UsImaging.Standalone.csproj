@@ -20,6 +20,7 @@
       <Private>True</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Viewer\Application\DupploPulse.UsImaging.Application.csproj" />
+    <ProjectReference Include="..\..\Viewer\Domain\Visonize.Viewer.Domain.csproj" />
     <ProjectReference Include="..\..\Viewer\Infrastructure\Dicom\src\DupploPulse.UsImaging.Infrastructure.Dicom.csproj" />
     <ProjectReference Include="..\..\Viewer\Infrastructure\ImageSource\DupploPulse.UsImaging.Infrastracture.ImageSource.csproj" />
   </ItemGroup>

@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.Viewer.Domain.Entities;
+using Visonize.Viewer.Domain.Interfaces;
 
 
-namespace DupploPulse.Viewer.Domain.Infrastructure
+namespace Visonize.Viewer.Domain.Infrastructure
 {
     // dimensions-only DTO used for updating viewport geometry without changing image
     public struct ViewportDTO
@@ -45,9 +45,9 @@ namespace DupploPulse.Viewer.Domain.Infrastructure
     }
 }
 
-namespace DupploPulse.UsImaging.Domain.Entities.Viewer
+namespace Visonize.Viewer.Domain.Entities
 {
-    using DupploPulse.Viewer.Domain.Infrastructure;
+    using Visonize.Viewer.Domain.Infrastructure;
     using static System.Net.Mime.MediaTypeNames;
 
     internal class ImageWorkspace : IImageWorkspace

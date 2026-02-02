@@ -1,21 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
+using Visonize.Viewer.Domain.Interfaces;
+using Visonize.Viewer.Domain.Infrastructure;
+using Visonize.Viewer.Domain.Service.Infrastructure;
 using DupploPulse.UsImaging.Domain.Interfaces;
-using DupploPulse.UsImaging.Domain.Service.Infrastructure;
 using static System.Net.Mime.MediaTypeNames;
+using DupploPulse.UsImaging.Domain.Service;
 
-namespace DupploPulse.UsImaging.Domain.Service
+namespace Visonize.Viewer.Domain.Service
 {
-    public class ImagingViewAreaAdapter : DupploPulse.Viewer.Domain.Infrastructure.IImageViewArea
+    public class ImagingViewAreaAdapter : Visonize.Viewer.Domain.Infrastructure.IImageViewArea
     {
-        private readonly IImageViewArea imageViewArea;
+        private readonly DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
         private readonly IArchivedDataSourceFactory archivedDataSourceFactory;
 
-        public ImagingViewAreaAdapter(IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
+        public ImagingViewAreaAdapter(DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
         {
             this.archivedDataSourceFactory = archivedDataSourceFactory;
             this.imageViewArea = imageViewArea;
@@ -26,28 +29,28 @@ namespace DupploPulse.UsImaging.Domain.Service
             this.imageViewArea.RemoveViewports(indexes);
         }
 
-        public async void SetViewports(int[] indexes, Viewer.Domain.Infrastructure.ViewportWithImageDTO[] viewports)
+        public async void SetViewports(int[] indexes, Visonize.Viewer.Domain.Infrastructure.ViewportWithImageDTO[] viewports)
         {
             var dataSource = await this.archivedDataSourceFactory.CreateArchivedDataSource(viewports[0].Image);
 
             // map to domain interface DTO with context
-            var viewport = new ImageAreaViewportWithContextDTO
+            var viewport = new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO
             {
                 X = viewports[0].X,
                 Y = viewports[0].Y,
                 Width = viewports[0].Width,
                 Height = viewports[0].Height,
-                ViewportType = ViewportType.Review,
+                ViewportType = DupploPulse.UsImaging.Domain.Interfaces.ViewportType.Review,
                 Context = dataSource
             };
 
-            this.imageViewArea.SetViewports(indexes, new ImageAreaViewportWithContextDTO[] { viewport });
+            this.imageViewArea.SetViewports(indexes, new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportWithContextDTO[] { viewport });
         }
 
-        public void UpdateViewports(int[] indexes, Viewer.Domain.Infrastructure.ViewportDTO[] viewports)
+        public void UpdateViewports(int[] indexes, Visonize.Viewer.Domain.Infrastructure.ViewportDTO[] viewports)
         {
             // map dimension-only DTOs to ImageAreaViewportDTO and call UpdateViewports
-            var mapped = viewports.Select(v => new ImageAreaViewportDTO { X = v.X, Y = v.Y, Width = v.Width, Height = v.Height, IsVisible = v.IsVisible }).ToArray();
+            var mapped = viewports.Select(v => new DupploPulse.UsImaging.Domain.Interfaces.ImageAreaViewportDTO { X = v.X, Y = v.Y, Width = v.Width, Height = v.Height, IsVisible = v.IsVisible }).ToArray();
             this.imageViewArea.UpdateViewports(indexes, mapped);
         }
     }
@@ -55,7 +58,7 @@ namespace DupploPulse.UsImaging.Domain.Service
     public class ViewerService : IViewer
     {
         private readonly IPostProcessingService postProcessingService;
-        private readonly IImageViewArea imageViewArea;
+        private readonly DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea;
         private readonly IImaging imaging;
         private readonly IArchivedDataSourceFactory archivedDataSourceFactory;
 
@@ -69,7 +72,7 @@ namespace DupploPulse.UsImaging.Domain.Service
 
         private readonly ImageWorkspace imageWorkspace;
 
-        public ViewerService(IImaging imaging, IPostProcessingService postProcessingService , IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
+        public ViewerService(IImaging imaging, IPostProcessingService postProcessingService , DupploPulse.UsImaging.Domain.Interfaces.IImageViewArea imageViewArea, IArchivedDataSourceFactory archivedDataSourceFactory)
         {
             this.imaging = imaging;
             this.postProcessingService = postProcessingService;

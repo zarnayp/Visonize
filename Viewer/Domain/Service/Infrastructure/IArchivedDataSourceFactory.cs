@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
 using DupploPulse.UsImaging.Domain.Player;
 
-namespace DupploPulse.UsImaging.Domain.Service.Infrastructure
+namespace Visonize.Viewer.Domain.Service.Infrastructure
 {
     public interface IArchivedDataSourceFactory
     {

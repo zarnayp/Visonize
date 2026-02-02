@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DupploPulse.UsImaging.Domain.Entities.Viewer
+namespace Visonize.Viewer.Domain.Entities
 {
     public class UsImage
     {

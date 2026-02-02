@@ -1,6 +1,7 @@
 ﻿using System;
 using DupploPulse.UsImaging.Application.Infrastructure;
 using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.Viewer.Domain.Interfaces;
 
 namespace DupploPulse.UsImaging.Application.ViewModels
 {

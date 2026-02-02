@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
 using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.Viewer.Domain.Interfaces;
 
 namespace DupploPulse.UsImaging.Application.ViewModels
 {

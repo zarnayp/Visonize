@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
 
-namespace DupploPulse.UsImaging.Domain.Interfaces
+namespace Visonize.Viewer.Domain.Interfaces
 {
     public enum Layout
     {

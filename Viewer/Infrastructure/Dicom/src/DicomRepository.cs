@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using FellowOakDicom;
 using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
 
 namespace DupploPulse.UsImaging.Infrastructure.Dicom;
 

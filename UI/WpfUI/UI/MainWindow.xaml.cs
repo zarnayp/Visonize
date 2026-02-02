@@ -29,6 +29,7 @@ using DupploPulse.UsImaging.Infrastructure.Stream;
 using PragmaticScene.RenderableInterfaces;
 using PragmaticScene.Renderer;
 using PragmaticScene.Renderer.Scene;
+using Visonize.Viewer.Domain.Service;
 
 namespace Standalone;
 

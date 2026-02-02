@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+
 using DupploPulse.UsImaging.Domain.Player;
 using DupploPulse.UsImaging.Domain.SceneObjects;
 using DupploPulse.UsImaging.Domain.Service.Infrastructure;
 using DupploPulse.UsImaging.Domain.ValueObjects;
 using DupploPulse.UsImaging.Infrastructure.Dicom;
+using Visonize.Viewer.Domain.Entities;
+using Visonize.Viewer.Domain.Service.Infrastructure;
 
 namespace DupploPulse.UsImaging.Infrastracture.ImageSource
 {

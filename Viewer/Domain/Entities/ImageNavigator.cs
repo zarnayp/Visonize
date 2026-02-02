@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using DupploPulse.UsImaging.Domain.Interfaces;
+using Visonize.Viewer.Domain.Interfaces;
 
-namespace DupploPulse.UsImaging.Domain.Entities.Viewer
+namespace Visonize.Viewer.Domain.Entities
 {
     internal class ImageNavigator : IImageNavigator
     {

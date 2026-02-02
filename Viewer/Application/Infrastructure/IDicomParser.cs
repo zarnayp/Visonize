@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DupploPulse.UsImaging.Application.ViewModels;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
 
 namespace DupploPulse.UsImaging.Application.Infrastructure
 {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DupploPulse.UsImaging.Application.Infrastructure;
-using DupploPulse.UsImaging.Domain.Entities.Viewer;
+using Visonize.Viewer.Domain.Entities;
 
 namespace DupploPulse.UsImaging.Application.ViewModels
 {
